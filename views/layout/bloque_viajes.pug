@@ -1,0 +1,29 @@
+.row.proximos-viajes 
+    each viaje in viajes 
+        .col-md-6.col-lg-4.mb-4
+            .card 
+                img(src=`img/destinos_${viaje.imagen}.jpg` alt=`Imagen de ${viaje.titulo}`)
+                .card-body 
+                    h2= viaje.titulo
+                    p 
+                        svg.icon.icon-tabler.icon-tabler-calendar-event(xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewbox='0 0 24 24' stroke-width='1.5' stroke='#dc135f' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                            path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                            path(d='M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z')
+                            path(d='M16 3l0 4')
+                            path(d='M8 3l0 4')
+                            path(d='M4 11l16 0')
+                            path(d='M8 15h2v2h-2z')
+                        | #{viaje.fecha_ida} - #{viaje.fecha_vuelta}
+                    p 
+                        svg.icon.icon-tabler.icon-tabler-users-group(xmlns='http://www.w3.org/2000/svg' width='44' height='44' viewbox='0 0 24 24' stroke-width='1.5' stroke='#dc135f' fill='none' stroke-linecap='round' stroke-linejoin='round')
+                            path(stroke='none' d='M0 0h24v24H0z' fill='none')
+                            path(d='M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0')
+                            path(d='M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1')
+                            path(d='M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0')
+                            path(d='M17 10h2a2 2 0 0 1 2 2v1')
+                            path(d='M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0')
+                            path(d='M3 13v-1a2 2 0 0 1 2 -2h2')
+                        | #{viaje.disponibles} Disponibles
+                    p= viaje.descripcion.substr(0, 100) + '...'
+                    a(href=`viajes/${viaje.slug}`, class="btn btn-success btn-block") Más Información
+                        

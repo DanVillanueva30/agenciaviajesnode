@@ -1,0 +1,23 @@
+{
+  "name": "agencia-de-viajes---node",
+  "version": "1.0.0",
+  "description": "Aprendiendo Node js con un proyecto",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "type": "module",
+  "author": "Daniel Villanueva",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "mysql2": "^3.9.2",
+    "pug": "^3.0.2",
+    "sequelize": "^6.37.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
